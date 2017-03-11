@@ -1,5 +1,6 @@
 package main;
 
+import sorting.CorrectnessandtheLoopInvariant;
 import sorting.InsertionSort;
 import sorting.InsertionSort2;
 import sorting.TutorialIntro;
@@ -9,7 +10,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        testInsetionSort2();
+        testInsetionSort3();
+    }
+
+    private static void testInsetionSort3() {
+        Scanner scanner = new Scanner(System.in);
+        CorrectnessandtheLoopInvariant insertionSort = new CorrectnessandtheLoopInvariant();
+        int arr[] = insertionSort.takeInput(scanner);
+        arr = insertionSort.insertionSort(arr);
+        insertionSort.printArray(arr);
     }
 
     private static void testInsetionSort() {
